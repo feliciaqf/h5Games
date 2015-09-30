@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>吃月饼</title>
+    <script type="text/javascript">
+        var isDesktop = navigator['userAgent'].match(/(ipad|iphone|ipod|android|windows phone)/i)?false:true;
+
+        var font = isDesktop?20:((window.innerWidth>window.innerHeight)?window.innerHeight:window.innerWidth/320*10);
+        document.write('<style type="text/css">'+
+                'html,body{font-size:'+(font<30?font:30)+'px;}'+
+                '</style>'
+                );
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body>
+    <div id="mainLayer" class="pageLayer">
+        <div id="timeCounter"></div>
+    </div>
+    <div id="scoreLayer" class="pageLayer bgg hide">
+        <div id="score-text"></div>
+        <div id="score-best"></div>
+        <div id="cakeBg"></div>
+        <div id="gameScoreControls" class="box">
+            <div class="btn fbox" id="btnReplay">重来</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="btn fbox" id="btnShare">炫耀一下</div>
+        </div>
+    </div>
+    <div id="welcomeLayer" class="pageLayer box bgg cbox hide">
+        <div class="welcome-bg"></div>
+        <div class="box cbox">
+            <div id="btnReady" class="btnReady"></div>
+        </div>
+    </div>
+    <div id="shareLayer" class="pageLayer hide">
+        <img src="http://www.57jrw.com/h5game/szcg/images/share.png" alt="分享到朋友圈" class="shareImg">
+    </div>
+
+    <script type="text/javascript" src="js/createjs.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
